@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="Шашлык в лаваше — Учебный интернет-магазин">
+  <meta property="og:description" content="Страница товара учебного интернет-магазина.">
+  <meta property="og:image" content="https://username.github.io/kr3-responsive-shop/images/preview.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Подробное описание товара в учебном интернет-магазине.">
+  <title>Шашлык в лаваше — Учебный интернет-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">VipShaurma</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
+      <span class="breadcrumbs__current">Шашлык в лаваше</span>
+    </nav>
+
+    <article class="product">
+      <img
+        class="product__image"
+        src="https://шашлыкдаром73.рф/wp-content/uploads/2022/11/Свинина-в-лаваше-768x516.jpg"
+        srcset="https://шашлыкдаром73.рф/wp-content/uploads/2022/11/Свинина-в-лаваше-768x516.jpg 768w"
+        sizes="(max-width: 767px) 100vw, 50vw"
+        alt="Шашлык из свинины в лаваше"
+        width="640" height="480" loading="lazy">
+
+      <div class="product__info">
+        <h1 class="product__title">Шашлык в лаваше</h1>
+        <p class="product__sku">Артикул: SP-002</p>
+        <p class="product__price">300 руб.</p>
+
+        <p>Шашлык из свинины в лаваше с овощами.</p>
+        <p>Доставка по всей Москве.</p>
+
+        <button
+          class="button button--primary product-card__button"
+          type="button"
+          data-product="Шашлык в лаваше">
+          Заказать
+        </button>
+
+        <p><a href="catalog.html">← Вернуться в каталог</a></p>
+
+        <div class="table-wrapper">
+          <table class="product-table">
+            <caption>Характеристики товара</caption>
+            <thead>
+              <tr>
+                <th scope="col">Параметр</th>
+                <th scope="col">Значение</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Вес</th><td>400 г</td></tr>
+              <tr><th scope="row">Состав</th><td>Лаваш, свинина, овощи, соус</td></tr>
+              <tr><th scope="row">Калорийность</th><td>600 ккал</td></tr>
+              <tr><th scope="row">Срок годности</th><td>2 часа</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <input type="hidden" id="selected-product" name="product">
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-name">Имя</label>
+        <input class="order-form__input" id="order-name" name="name" type="text" required>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-email">E-mail</label>
+        <input class="order-form__input" id="order-email" name="email" type="email" required>
+      </div>
+
+      <div class="order-form__actions">
+        <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+        <button class="button button--primary" type="submit">Отправить заявку</button>
+      </div>
+    </form>
+  </dialog>
+
+  <p class="success-message" id="success-message" hidden>Форма успешно отправлена!</p>
+</body>
+</html>
