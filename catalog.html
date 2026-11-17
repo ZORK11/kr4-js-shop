@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Учебный интернет-магазин">
+  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+  <meta property="og:image" content="https://username.github.io/kr3-responsive-shop/images/preview.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог товаров учебного интернет-магазина.">
+  <title>Каталог товаров — Учебный интернет-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/catalog.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">VipShaurma</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Каталог</span>
+    </nav>
+
+    <section class="section">
+      <h1>Каталог товаров</h1>
+      <p>Учебный каталог товаров с фильтрами и адаптивной сеткой карточек.</p>
+    </section>
+
+    <section class="catalog-layout">
+  <aside class="catalog-filters">
+    <h2>Поиск и фильтры</h2>
+
+    <div class="filters-form">
+      <label for="product-search">Поиск по названию</label>
+      <input id="product-search" type="search" placeholder="Например, шаурма">
+
+      <label for="category-filter">Категория</label>
+      <select id="category-filter">
+        <option value="all">Все категории</option>
+        <option value="shaurma">Шаурма</option>
+        <option value="shashlyk">Шашлык</option>
+        <option value="kebab">Кебаб</option>
+        <option value="sauces">Соусы</option>
+        <option value="drinks">Напитки</option>
+      </select>
+
+      <label for="sort-filter">Сортировка</label>
+      <select id="sort-filter">
+        <option value="default">По умолчанию</option>
+        <option value="price-asc">Цена: по возрастанию</option>
+        <option value="price-desc">Цена: по убыванию</option>
+        <option value="title-asc">Название: А–Я</option>
+      </select>
+
+      <button type="button" id="reset-filters" class="button button--secondary">
+        Сбросить фильтры
+      </button>
+    </div>
+  </aside>
+
+  <section class="catalog-products">
+    <h2>Список товаров</h2>
+    <p id="products-count" class="catalog-count"></p>
+
+    <div class="products-grid" id="products-grid"></div>
+
+    <div id="empty-state" class="empty-state" hidden>
+      <h3>Товары не найдены</h3>
+      <p>Попробуйте изменить запрос или выбрать другую категорию.</p>
+      <button type="button" id="reset-filters-bottom" class="button button--secondary">
+        Сбросить фильтры
+      </button>
+    </div>
+  </section>
+</section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+</body>
+</html>
